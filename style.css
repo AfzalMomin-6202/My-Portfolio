@@ -493,7 +493,7 @@ section{
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 40px;
+    gap: 100px;
     padding: 60px 80px;
     background: url(./Assets/bg.jpeg) no-repeat;
     background-size: cover;
