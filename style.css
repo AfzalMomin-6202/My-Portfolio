@@ -1,0 +1,966 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+body{
+    color: #ededed;
+}
+html{
+    scroll-behavior: smooth;
+}
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+.logo{
+    position: relative;
+    left: -4%;
+    font-size: 32px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    background: none;
+    cursor: default;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+}
+.logo:hover{
+    color:aqua;
+    text-shadow:0 0 30px aqua;
+
+}
+.navbar a{
+    display: inline-block;
+    font-size: 17px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 20px;
+    transition: .3s;
+    opacity: 0;
+    animation: slideLeft .4s ease forwards;
+    animation-delay: calc(.1s*var(--i));
+}
+.navbar a:hover{
+    color:#0ef;
+}
+.home{
+    position: relative;
+    width: 100%;
+    justify-content: space-between;
+    height: 100vh;
+    background: url(./Assets/WhatsApp\ Image\ 2026-05-19\ at\ 12.10.13\ PM.jpeg) no-repeat;
+    background-size: cover;
+    background-position: center ;
+    display: flex;
+    align-items: center;
+    padding: 70px 10% 0;
+}
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+.home img{
+    width: 430px;
+    border-radius: 50%;
+    margin-right: 50px;
+    box-shadow: 0 0 60px #0ef;
+    border: 15px solid #0ef; 
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: .2s;
+}
+.home-content{
+    max-width: 550px;
+}
+.home-content h3{
+    font-size: 25px;
+    font-weight: 700;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: .2s;
+}
+.home-content h1{
+    font-size: 58px;
+    font-weight: 700;
+    margin: -3px 0;
+    animation: slideBottom 1s ease forwards;
+    animation-delay: .1s;
+}
+.home-content{
+    font-size: 17px;
+}
+.home-content p{
+    font-size: 15px; 
+    margin-top: 5px;
+    opacity: 0;    
+    animation: slideLeft 1s ease forwards;
+    animation-delay: .1s;
+}
+.home-sci a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #0ef;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #0ef;
+    text-decoration: none;
+    transition: .1s ease;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: calc(.1s * var(--i));
+    margin: 30px 15px 30px 0;
+}
+.home-sci a:hover{
+    background: #0ef;
+    color: #081b29;
+    box-shadow: 0 0 20px #0ef;
+}
+.btn-box{
+    display: inline-block;
+    padding: 12px 28px;
+    background: #0ef;
+    border-radius: 40px;
+    font-size: 16px;
+    color: #081b29;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    transition-delay: 2s;
+    box-shadow: 0 0 10px #0ef;
+}
+.btn-box:hover{
+    box-shadow: 0 0 5px cyan,
+    0 0 25px cyan,0 0 30px cyan;
+}
+.about{
+    position: relative;
+    min-height: 640px;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    background:url(./Assets/WhatsApp\ Image\ 2026-05-19\ at\ 12.10.13\ PM.jpeg);
+    padding:60px;
+    overflow: hidden;
+}
+#particles-about {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+.about-img img{
+   /* height:370px; */
+   height: auto;
+   max-width: 370px;
+   border-radius: 50%;
+   margin-left: auto;
+   margin-right: auto;
+   box-shadow: 0 0 30px #0ef;
+   animation: slideRight 1s ease forwards;
+   animation-delay: .2s;
+}
+.about-text{
+    /* border: 2px solid white; */
+    /* height: 400px; */
+    height: auto;
+    /* width: 600px; */
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    animation: slideLeft 1s ease forwards;
+}
+.about-text h2{
+    font-weight: bold;
+    font-size: 40px;
+    animation: slideLeft 1s ease forwards;
+    span{
+        color: #0ef;
+    }
+}
+.about-text h4{
+    font-size:20px;
+    font-weight:600;
+    margin-top: -20px;
+    animation: slideLeft 1s ease forwards;
+}
+.about-text p{
+    font-size: 17px;
+    line-height: 20px;
+}
+.about-text a{
+    width: 170px;
+    text-align: center;
+    background: #0ef;
+    color: #081b29;
+    text-decoration: none;
+    border-radius: 40px;
+    padding: 10px 0;
+    transition: .3s;
+}
+.about-text a:hover{
+    box-shadow: 0 0 5px cyan,
+    0 0 25px cyan,0 0 30px cyan;
+}
+.sub-title{
+    position: relative;
+    z-index: 1;
+    padding:0;
+    background: url(./Assets/WhatsApp\ Image\ 2026-05-19\ at\ 12.10.13\ PM.jpeg) no-repeat;
+    background-size: cover;
+    text-align: center;
+    font-size: 50px;
+    padding: 100px 0 40px 0;
+    text-shadow: 0 0 100px #0ef;
+    /* border: 2px solid white; */
+    scroll-margin-top: 40px;
+}
+
+section{
+    position: relative;
+    display: flex;
+    background: url(./Assets/WhatsApp\ Image\ 2026-05-19\ at\ 12.10.13\ PM.jpeg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    /* border: 2px solid white; */
+}
+
+.container1{
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 50px;
+    padding:20px 60px;
+    /* border: 2px solid white; */
+}
+
+.Technical-bars{
+    flex:1;
+    max-width: 500px;
+    margin-left:6%;
+    /* border: 2px solid white; */
+}
+.radial-bars{
+    flex-shrink:0;
+    flex-grow:0;
+    flex:1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* align-items: flex-start; */
+    gap: 20px;
+    /* border: 2px solid white; */
+}
+.heading1{
+    width: 100%;
+    text-align:center;
+    text-decoration:underline;
+    text-underline-offset: 10px;
+    text-decoration-thickness:5px;
+    margin-bottom:50px;
+}
+.bar{
+    font-size:23px;
+}
+.Technical-bars .bar{
+    margin-top:40px;
+}
+.Technical-bars .bar:first-child{
+    margin-top:0;
+}
+.Technical-bars .bar:last-child{
+    margin-bottom:0;
+}
+.Technical-bars .bar .info{
+    margin-bottom: 5px;
+}
+.Technical-bars .bar .info span{
+    font-size: 14px;
+    font-weight: 500;
+    animation:showText 0.5s 1s linear forwards;
+    opacity:0;
+}
+.Technical-bars .bar .progress-line{
+    position: relative;
+    border-radius:10px;
+    width:100%;
+    height:5px;
+    background-color:#000000;
+    animation:animate 1s cubic-bezier(1,0,0.5,1) forwards;
+    transform:scaleX(0);
+    transform-origin:left;
+}
+@keyframes animate{
+    100%{
+        transform:scaleX(1);
+    }
+}
+.Technical-bars .bar .progress-line span{
+    display: block;
+   height:100%;
+   background-color:#0ef;
+   position:absolute;
+    border-radius:10px;
+    animation:animate 1s 1s cubic-bezier(1,0,0.5,1) forwards;
+    transform:scaleX(0);
+    transform-origin:left;
+}
+.progress-line.html span{
+    width:90%;
+}
+.progress-line.css span{
+    width:80%;
+}
+.progress-line.javascript span{
+    width:70%;
+}
+.progress-line.java span{
+    width:60%;
+}
+.progress-line.sql span{
+    width:50%;
+}
+.progress-line span::after{
+    position: absolute;
+    padding:1px 8px;
+    background-color:#000;
+    color:#fff;
+    font-size:12px;
+    border-radius:3px;
+    top:-28px;
+    right:0;
+    animation:showText 0.5s 1.5s linear forwards;
+    opacity:0;
+}
+.progress-line.html span::after{
+    content:"90%";
+}
+.progress-line.css span::after{
+    content:"80%";
+}
+.progress-line.javascript span::after{
+    content:"70%";
+}
+.progress-line.java span::after{
+    content:"60%";
+}
+.progress-line.sql span::after{
+    content:"50%";
+}
+.progress-line span::before{
+    content:"";
+    position:absolute;
+    width:0;
+    height:0;
+    border:7px solid transparent;
+    border-bottom-width:0px;
+    border-top-width:0px;
+    border-top-color:#000;
+    top:-10px;
+    right:0;
+    animation:showText 0.5s 1.5s linear forwards;
+    opacity:0;
+}
+.radial-bars .radial-bar{
+    width: 45%;
+    height:150px;
+    margin-bottom:30px;
+    position:relative;
+}
+.radial-bars .radial-bar svg{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%) rotate(-90deg);
+    width:150px;
+    height:150px;
+}
+.radial-bars .radial-bar .progress-bar{
+    stroke-width:10;
+    stroke: black;
+    fill:transparent;
+    stroke-dasharray: 502;
+    stroke-dashoffset: 502;
+    stroke-linecap:round;
+    animation:animate-bar 1s linear forwards;
+}
+@keyframes animate-bar{
+    100%{
+        stroke-dashoffset:-1;
+    }
+}
+.path{
+    stroke-width:10;
+    stroke:#0ef;
+    fill:transparent;
+    stroke-dasharray:502;
+    stroke-dashoffset:502;
+    stroke-linecap:round;
+}
+.path-1{animation:animate-path1 1s 1s linear forwards}
+.path-2{animation:animate-path2 1s 1s linear forwards}
+.path-3{animation:animate-path3 1s 1s linear forwards}
+.path-4{animation:animate-path4 1s 1s linear forwards}
+
+
+@keyframes animate-path1{
+    100%{
+        stroke-dashoffset: 50;
+    }
+}
+@keyframes animate-path2{
+    100%{
+        stroke-dashoffset: 100;
+    }
+}
+@keyframes animate-path3{
+    100%{
+        stroke-dashoffset: 201;
+    }
+}
+@keyframes animate-path4{
+    100%{
+        stroke-dashoffset: 151;
+    }
+}
+.radial-bar .percentage{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    font-size:17px;
+    font-weight:500;
+    color:#0ef;
+    z-index:10;
+    animation:showText 0.5s 1s linear forwards;
+    opacity:0;
+}
+.radial-bar .text{
+    width:100%;
+    position:absolute;
+    text-align:center;
+    left:50%;
+    bottom:-20px;
+    transform:translateX(-50%);
+    font-size:15px;
+    font-weight:500;
+    color:#fff;
+    z-index:10;
+    animation:showText 0.5s 1s linear forwards;
+    opacity:0;
+}
+#particles-skills {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+
+.projects{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 60px 80px;
+    background: url(./WhatsApp\ Image\ 2026-05-19\ at\ 12.10.13\ PM.jpeg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+#particles-projects{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.flip-card{
+    width: 300px;
+    height: 350px;
+    perspective: 1000px;
+    z-index: 1;
+}
+
+.flip-card-inner{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s ease;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner{
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    gap: 15px;
+}
+
+.flip-card-front{
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid #0ef;
+    box-shadow: 0 0 20px rgba(0, 239, 255, 0.1);
+}
+
+.flip-card-front h3{
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    color: #fff;
+}
+
+.flip-card-back{
+    background: #0ef;
+    transform: rotateY(180deg);
+    color: #081b29;
+}
+
+.flip-card-back h3{
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    color: #081b29;
+}
+
+.flip-card-back p{
+    font-size: 13px;
+    text-align: center;
+    line-height: 1.6;
+    color: #081b29;
+}
+
+.tags{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.tags span{
+    font-size: 11px;
+    padding: 4px 10px;
+    border: 1px solid #0ef;
+    border-radius: 20px;
+    color: #0ef;
+}
+
+.card-btns{
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.btn-outline{
+    background: transparent !important;
+    border: 2px solid #081b29;
+    color: #081b29 !important;
+}
+
+.btn-outline:hover{
+    background: #081b29 !important;
+    color: #0ef !important;
+}.education{
+    position: relative;
+    padding: 60px 80px;
+    background: url(./WhatsApp\ Image\ 2026-05-19\ at\ 12.10.13\ PM.jpeg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+#particles-education{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.education-container{
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 200px;
+    padding:0 100px;
+    padding-left:150px;
+}
+
+/* horizontal line behind everything */
+.timeline-line-horizontal{
+    position: absolute;
+    top: 10px;
+    left: 12%;
+    width: 80%;
+    height: 3px;
+    background: linear-gradient(to right, transparent, #0ef, #0ef, transparent);
+    z-index: 1;
+}
+
+.edu-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    min-width: 200px;
+    position: relative;
+    z-index: 2;
+    padding: 0 10px;
+    max-width: 300px;
+}
+
+/* dot sitting ON the line */
+.edu-dot{
+    width: 22px;
+    height: 22px;
+    background: #081b29;
+    border: 3px solid #0ef;
+    border-radius: 50%;
+    box-shadow: 0 0 12px #0ef;
+    margin-bottom: 20px;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 3;
+}
+
+/* vertical connector from dot to card */
+.edu-card::after{
+    content: '';
+    position: absolute;
+    top: 22px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 20px;
+    background: #0ef;
+    opacity: 0.5;
+}
+
+.edu-content{
+    background: rgba(0, 239, 255, 0.04);
+    border: 1px solid rgba(0, 239, 255, 0.4);
+    border-radius: 15px;
+    padding: 25px 20px;
+    text-align: center;
+    width: 170%;
+    transition: .3s ease;
+}
+
+.edu-content:hover{
+    background: rgba(0, 239, 255, 0.08);
+    border-color: #0ef;
+    box-shadow: 0 0 25px rgba(0, 239, 255, 0.15);
+    transform: translateY(-5px);
+}
+
+.edu-icon{
+    width: 55px;
+    height: 55px;
+    background: rgba(0, 239, 255, 0.1);
+    border: 2px solid #0ef;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 15px;
+}
+
+.edu-icon i{
+    font-size: 22px;
+    color: #0ef;
+}
+
+.edu-content h3{
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 8px;
+}
+
+.edu-content h4{
+    font-size: 15px;
+    font-weight: 400;
+    color: #aaa;
+    margin-bottom: 3px;
+    line-height: 1.5;
+}
+
+.edu-content .year{
+    display: inline-block;
+    font-size: 15px;
+    padding: 3px 12px;
+    background: rgba(0, 239, 255, 0.1);
+    border: 1px solid #0ef;
+    border-radius: 20px;
+    color: #0ef;
+    margin: 10px 0;
+}
+
+.edu-content p{
+    font-size: 15px;
+    color: #ccc;
+    margin-top: 8px;
+}
+
+.edu-content strong{
+    color: #0ef;
+}
+.contact{
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 60px;
+    padding: 80px 100px;
+    background: url(./WhatsApp\ Image\ 2026-05-19\ at\ 12.10.13\ PM.jpeg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+#particles-contact{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.contact-info{
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.contact-info h3{
+    font-size: 30px;
+    font-weight: 700;
+    color: #0ef;
+}
+
+.contact-info p{
+    font-size: 15px;
+    line-height: 1.8;
+    color: #ccc;
+}
+
+.contact-details{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-item{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 15px;
+    color: #fff;
+}
+
+.contact-item i{
+    font-size: 22px;
+    color: #0ef;
+    min-width: 25px;
+}
+
+.contact-social{
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.contact-social a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 42px;
+    height: 42px;
+    border: 2px solid #0ef;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #0ef;
+    text-decoration: none;
+    transition: .3s ease;
+}
+
+.contact-social a:hover{
+    background: #0ef;
+    color: #081b29;
+    box-shadow: 0 0 20px #0ef;
+}
+
+.contact-form{
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.input-group input,
+.input-group textarea{
+    width: 100%;
+    padding: 14px 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid #0ef;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+    transition: .3s ease;
+}
+
+.input-group input:focus,
+.input-group textarea:focus{
+    background: rgba(0, 239, 255, 0.05);
+    box-shadow: 0 0 10px rgba(0, 239, 255, 0.2);
+}
+
+.input-group input::placeholder,
+.input-group textarea::placeholder{
+    color: #aaa;
+}
+
+.input-group textarea{
+    resize: none;
+}
+
+.contact-form .btn-box{
+    width: fit-content;
+    cursor: pointer;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+}
+
+
+
+
+
+
+
+@keyframes showText {
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes slideRight{
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;    
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;    
+    }
+}
+@keyframes slideLeft{
+    0%{
+        transform: translateX(100px);
+        opacity: 0;    
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;    
+    }
+}
+@keyframes slideBottom{
+    0%{
+        transform: translateY(100px);
+        opacity: 0;    
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;    
+    }
+}
+@keyframes slideRight{
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;    
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;    
+    }
+}
+
+@keyframes slideLeft{
+    0%{
+        transform: translateX(100px);
+        opacity: 0;    
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;    
+    }
+}
+@keyframes slideTop{
+    0%{
+        transform: translateY(100px);
+        opacity: 0;    
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;    
+    }
+}
