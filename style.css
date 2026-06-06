@@ -59,7 +59,7 @@ html{
     width: 100%;
     justify-content: space-between;
     height: 100vh;
-    background: url(./Assets/WhatsApp\ Image\ 2026-05-19\ at\ 12.10.13\ PM.jpeg) no-repeat;
+    background: url(./Assets/bg.jpeg) no-repeat;
     background-size: cover;
     background-position: center ;
     display: flex;
@@ -160,7 +160,7 @@ html{
     display: grid;
     grid-template-columns: repeat(2,1fr);
     align-items: center;
-    background:url(./Assets/WhatsApp\ Image\ 2026-05-19\ at\ 12.10.13\ PM.jpeg);
+    background:url(./Assets/bg.jpeg);
     padding:60px;
     overflow: hidden;
 }
@@ -179,6 +179,7 @@ html{
    border-radius: 50%;
    margin-left: auto;
    margin-right: auto;
+   display: block;
    box-shadow: 0 0 30px #0ef;
    animation: slideRight 1s ease forwards;
    animation-delay: .2s;
@@ -229,7 +230,7 @@ html{
     position: relative;
     z-index: 1;
     padding:0;
-    background: url(./Assets/WhatsApp\ Image\ 2026-05-19\ at\ 12.10.13\ PM.jpeg) no-repeat;
+    background: url(./Assets/bg.jpeg) no-repeat;
     background-size: cover;
     text-align: center;
     font-size: 50px;
@@ -242,7 +243,7 @@ html{
 section{
     position: relative;
     display: flex;
-    background: url(./Assets/WhatsApp\ Image\ 2026-05-19\ at\ 12.10.13\ PM.jpeg) no-repeat;
+    background: url(./Assets/bg.jpeg) no-repeat;
     background-size: cover;
     background-position: center;
     overflow: hidden;
@@ -494,7 +495,7 @@ section{
     flex-wrap: wrap;
     gap: 40px;
     padding: 60px 80px;
-    background: url(./WhatsApp\ Image\ 2026-05-19\ at\ 12.10.13\ PM.jpeg) no-repeat;
+    background: url(./Assets/bg.jpeg) no-repeat;
     background-size: cover;
     background-position: center;
     overflow: hidden;
@@ -612,7 +613,7 @@ section{
 }.education{
     position: relative;
     padding: 60px 80px;
-    background: url(./WhatsApp\ Image\ 2026-05-19\ at\ 12.10.13\ PM.jpeg) no-repeat;
+    background: url(./Assets/bg.jpeg) no-repeat;
     background-size: cover;
     background-position: center;
     overflow: hidden;
@@ -766,7 +767,7 @@ section{
     align-items: center;
     gap: 60px;
     padding: 80px 100px;
-    background: url(./WhatsApp\ Image\ 2026-05-19\ at\ 12.10.13\ PM.jpeg) no-repeat;
+    background: url(./Assets/bg.jpeg) no-repeat;
     background-size: cover;
     background-position: center;
     overflow: hidden;
